@@ -6,7 +6,6 @@ body {
 
 .wrapper {
     text-align: center;
-    font-family: sans-serif;
 }
 
 .container {
@@ -14,7 +13,10 @@ body {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 10px;
     margin-top: 10px;
+    margin-bottom: 120px;
 }
 
 .navbar {
@@ -39,34 +41,56 @@ body {
     text-decoration: underline;
 }
 
+.column-4 {
+    grid-column: span 4;
+    grid-row: span 1;
+    display: block;
+    height: 100%;
+}
+
 .column-6 {
     grid-column: span 6;
+    grid-row: span 1;
     display: block;
+    height: 100%;
+}
+
+.column-8 {
+    grid-column: span 8;
+    grid-row: span 1;
+    display: block;
+    height: 100%;
 }
 
 .column-12 {
     grid-column: span 12;
+    grid-row: span 1;
     display: block;
+    height: 100%;
 }
 
 .card-item {
     display: block;
-    padding: 10px;
     background: none;
     color: yellow;
-    margin: 5px;
     border: solid 2px yellow;
     border-radius: 4px;
+    height: 100%;
+}
+
+.card-item .container {
+    margin-bottom: 0;
 }
 
 footer {
-    position: absolute;
-    text-align: center;
+    position: relative;
+    right: 0;
     bottom: 0;
-    width: 100%;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
     background: yellow;
     color: navy;
-    padding: 20px;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -96,4 +120,156 @@ footer {
     color: yellow;
     text-transform: uppercase;
     font-size: 1.2em;
+}
+
+.me-img {
+    width: 100%;
+    height: auto;
+}
+
+.me-text {
+    margin: 0;
+}
+
+
+/* Tablet */
+
+@media screen and (max-width: 992px) {
+    header {
+        position: fixed;
+        width: 150px;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        padding: 0;
+    }
+    header img {
+        width: 150px;
+    }
+    .torch-text {
+        width: 150px;
+        font-size: 10px;
+        position: fixed;
+        height: 60px;
+        text-transform: uppercase;
+        left: 0;
+        top: 0;
+        z-index: 4;
+        color: navy;
+    }
+    .navbar {
+        height: 100%;
+        width: 150px;
+        position: fixed;
+        text-align: left;
+        /* Fixed Sidebar (stay in place on scroll) */
+        z-index: 1;
+        /* Stay on top */
+        top: 0;
+        /* Stay at the top */
+        left: 0;
+        /* Black */
+        overflow-x: hidden;
+        padding: 0;
+        /* Disable horizontal scroll */
+        padding-left: 10px;
+        padding-top: 40px;
+    }
+    .navbar-item {
+        display: block;
+        margin-top: 10px;
+    }
+    .wrapper {
+        margin-left: 160px;
+    }
+    footer {
+        position: fixed;
+        width: 150px;
+        z-index: 2;
+        padding: 0;
+        left: 0;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    footer img {
+        width: 140px;
+    }
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 600px) {
+    .column-4,
+    .column-6,
+    .column-8,
+    .column-12 {
+        grid-column: span 12;
+    }
+    .navbar {
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.5em;
+        background: yellow;
+        padding: 10px;
+        margin-top: 100px;
+        height: fit-content;
+        display: none;
+    }
+    .navbar-item {
+        color: navy;
+        text-decoration: none;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .wrapper {
+        margin: 0;
+        margin-top: 25%;
+        margin-bottom: 0;
+    }
+    header {
+        background: yellow;
+    }
+    header:hover {
+        cursor: pointer;
+    }
+    .torch-img {
+        height: auto;
+        max-height: 100px;
+        width: 100%;
+    }
+    .header-title {
+        width: 100%;
+    }
+    .torch-text {
+        width: 100%;
+        position: absolute;
+        height: fit-content;
+        color: navy;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        margin-top: 8%;
+    }
+    footer {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 1rem;
+        text-align: center;
+        background: yellow;
+        color: navy;
+        text-transform: uppercase;
+        font-weight: bold;
+        width: auto;
+    }
+    footer img {
+        width: 80%;
+    }
 }
