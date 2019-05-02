@@ -1,7 +1,8 @@
 body {
     text-align: center;
     margin: 0px;
-    background: url(img/bg.gif);
+    background: #fafafa;
+    font-family: sans-serif;
 }
 
 .wrapper {
@@ -23,23 +24,27 @@ body {
 .navbar {
     width: 100%;
     text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
+    text-transform: lowercase;
     text-decoration: none;
     font-size: 1.5em;
-    background: yellow;
+    background: #fff;
     padding: 10px 0;
 }
 
 .navbar-item {
-    color: navy;
+    color: #555555;
     text-decoration: none;
     margin-left: 10px;
     margin-right: 10px;
 }
 
 .navbar-item:hover {
-    text-decoration: underline;
+    background: lightblue;
+}
+
+.menu-button {
+    display: none;
+    color: #555555;
 }
 
 .column-4 {
@@ -72,10 +77,9 @@ body {
 
 .card-item {
     display: block;
-    background: none;
-    color: yellow;
-    border: solid 2px yellow;
-    border-radius: 4px;
+    background: #fff;
+    color: #555;
+    border: none;
     height: 100%;
 }
 
@@ -90,8 +94,8 @@ footer {
     left: 0;
     padding: 1rem;
     text-align: center;
-    background: yellow;
-    color: navy;
+    background: #fff;
+    color: #555555;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -100,11 +104,12 @@ footer {
     text-decoration: underline;
     text-transform: uppercase;
     font-weight: bold;
+    padding-top: 10px;
 }
 
 .mail-img {
-    width: 30%;
-    margin: 2em auto;
+    width: 100%;
+    content: url('img/wow.gif');
 }
 
 .torch-container {
@@ -118,9 +123,13 @@ footer {
     top: calc(50% - 30px);
     left: calc(50% - 150px);
     height: 60px;
-    color: yellow;
+    color: #555;
     text-transform: uppercase;
     font-size: 1.2em;
+}
+
+.torch-img {
+    visibility: hidden;
 }
 
 .me-img {
@@ -136,6 +145,12 @@ footer {
 /* Tablet */
 
 @media screen and (max-width: 992px) {
+    .column-4 {
+        grid-column: span 6;
+    }
+    .container {
+        width: 95%;
+    }
     header {
         position: fixed;
         width: 150px;
@@ -156,7 +171,7 @@ footer {
         left: 0;
         top: 0;
         z-index: 4;
-        color: navy;
+        color: #555;
     }
     .navbar {
         height: 100%;
@@ -201,6 +216,18 @@ footer {
 /* Mobile */
 
 @media screen and (max-width: 600px) {
+    .collapsed {
+        display: none;
+    }
+    .menu-button{
+        display: block;
+        height: 40px;
+        padding: 10px;
+    }
+
+    .menu-button h3 {
+        margin: 0;
+    }
     .column-4,
     .column-6,
     .column-8,
@@ -214,27 +241,25 @@ footer {
         font-weight: bold;
         text-decoration: none;
         font-size: 1.5em;
-        background: yellow;
-        padding: 10px;
-        margin-top: 100px;
+        background: #fff;
+        padding: 0;
+        padding-top: 20px;
+        margin-top: 140px;
         height: fit-content;
-        display: none;
     }
     .navbar-item {
-        color: navy;
+        color: #555;
         text-decoration: none;
-        margin-left: 10px;
-        margin-right: 10px;
     }
     .wrapper {
         margin: 0;
-        margin-top: 25%;
+        margin-top: 35%;
         margin-bottom: 0;
     }
     header {
-        background: yellow;
+        background: #fdfdfd;
     }
-    header:hover {
+    .menu-button:hover {
         cursor: pointer;
     }
     .torch-img {
@@ -249,7 +274,7 @@ footer {
         width: 100%;
         position: absolute;
         height: fit-content;
-        color: navy;
+        color: #555;
         text-transform: uppercase;
         font-size: 1.2em;
         text-align: center;
@@ -264,8 +289,8 @@ footer {
         left: 0;
         padding: 1rem;
         text-align: center;
-        background: yellow;
-        color: navy;
+        background: #fff;
+        color: #555;
         text-transform: uppercase;
         font-weight: bold;
         width: auto;
@@ -273,10 +298,23 @@ footer {
     footer img {
         width: 80%;
     }
+    .navbar-select {
+        margin-bottom: 10px;
+    }
 }
 
 .movie-img {
     width: 100%;
     height: 150px;
     object-fit: cover;
+}
+
+.navbar-select {
+    vertical-align: middle;
+    margin-left: 10px;
+    height: 1.5em;
+}
+
+.navbar-select:hover {
+    background: #fff;
 }

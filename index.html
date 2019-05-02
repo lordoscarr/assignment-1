@@ -2,7 +2,8 @@
 
 <head>
     <title>Oscar</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link class="css-link" rel="stylesheet" type="text/css" href="style.classic.css">
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -14,12 +15,20 @@
                 <img src="img/torch.gif" class="torch-img" />
                 <p class="torch-text">Inlämningsuppgift 1</p>
             </div>
+            <div class="menu-button">
+                <h3>MENY</h3>
+            </div>
         </header>
 
-        <nav class="navbar">
+        <nav class="navbar collapsed">
             <a class="navbar-item" href="index.html">Start</a>
             <a class="navbar-item" href="list.html">Filmer</a>
             <a class="navbar-item" href="slide.html">Bildspel</a>
+            <select class="navbar-item navbar-select">
+                <option value="classic">Klassisk</option>
+                <option value="modern">Modern</option>
+                <option value="night">Night mode</option>
+            </select>
         </nav>
 
         <main class="container">
