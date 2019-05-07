@@ -4,6 +4,7 @@
     <title>Oscar</title>
     <link class="css-link" rel="stylesheet" type="text/css" href="style.classic.css">
     <script src="index.js"></script>
+    <script src="slideshow.js"></script>
 </head>
 
 <body>
@@ -32,8 +33,52 @@
         </nav>
 
         <main class="container">
-            <section class="column-12 slideshow">
-                <img src="img/mov1.jpg" />
+            <section class="column-12">
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+
+                    <div class="slide-item fade">
+                        <div class="slide-number"></div>
+                        <img src="img/mov1.jpg" class="slide-img">
+                        <div class="slide-text">Hot Rod</div>
+                    </div>
+
+                    <div class="slide-item fade">
+                        <div class="slide-number"></div>
+                        <img src="img/mov2.jpg" class="slide-img">
+                        <div class="slide-text">Pineapple Express</div>
+                    </div>
+
+                    <div class="slide-item fade">
+                        <div class="slide-number"></div>
+                        <img src="img/mov3.jpg" class="slide-img">
+                        <div class="slide-text">The Interview</div>
+                    </div>
+
+                    <div class="slide-item fade">
+                        <div class="slide-number"></div>
+                        <img src="img/mov4.jpg" class="slide-img">
+                        <div class="slide-text">The Disaster Artist</div>
+                    </div>
+
+                    <div class="slide-item fade">
+                        <div class="slide-number"></div>
+                        <img src="img/mov5.jpg" class="slide-img">
+                        <div class="slide-text">Popstar</div>
+                    </div>
+
+                    <div class="slide-item fade">
+                        <div class="slide-number"></div>
+                        <img src="img/mov6.jpg" class="slide-img">
+                        <div class="slide-text">7 Days in Hell</div>
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev-button" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next-button" onclick="plusSlides(1)">&#10095;</a>
+                    <img class="pause-button" onclick="pauseSlide()" src="img/pause.png"/>
+                </div>
+                <br>
             </section>
         </main>
 
