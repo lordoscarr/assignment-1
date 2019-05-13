@@ -1,14 +1,20 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     //html loaded, set event listeners
     document.querySelector('.menu-button').addEventListener("click", collapseNav);
-    document.querySelector('.navbar-select').addEventListener("change", setStylesheet);
 
     let style = localStorage.getItem('style');
     if (style != null) {
         document.querySelector('.navbar-select').value = style;
     }
+
+    document.querySelector('.navbar-select').addEventListener("change", selectChanged);
     setStylesheet();
 });
+
+function selectChanged(){
+    setStylesheet();
+    alert('Stilpreferens sparad.');
+}
 
 function setStylesheet() {
     let style = document.querySelector('.navbar-select').value;
